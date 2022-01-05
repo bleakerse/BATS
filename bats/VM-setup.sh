@@ -48,9 +48,9 @@ cp -a bats-core/. /bats-tests/test/bats
 #cp ~/ORCA_Catalog/bats/*.bash /bats-tests/test/test_helper
 #cp ~/ORCA_Catalog/bats/*.sh /bats-tests/src
 
-cp ~/myagent/_work/1/s/bats/*.bats
-cp ~/myagent/_work/1/s/bats/*.bash
-cp ~/myagent/_work/1/s/bats/*.sh
+cp ~/myagent/_work/1/s/bats/*.bats /bats-tests/test
+cp ~/myagent/_work/1/s/bats/*.bash /bats-tests/test/test_helper
+cp ~/myagent/_work/1/s/bats/*.sh /bats-tests/src
 
 
 
