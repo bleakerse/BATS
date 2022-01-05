@@ -26,7 +26,7 @@ setup() {
    
     # Set new hostname
     goodHostNameEnd=$(cat /dev/urandom | tr -dc 'a-z0-9-' | fold -w $((1 + $RANDOM % 12)) | head -n 1)
-    goodHostName=$hostNameStart$goodHostNameEnd
+    goodHostName="$hostNameStart$goodHostNameEnd"
     hostname $goodHostName
  
     # Run
@@ -42,7 +42,7 @@ setup() {
  
     # Set new hostname
     badLengthEnd=$(cat /dev/urandom | tr -dc 'a-z0-9-' | fold -w $((13 + $RANDOM % 50)) | head -n 1)
-    badLength=$hostNameStart$badLengthEnd
+    badLength="$hostNameStart$badLengthEnd"
     hostname $badLength
  
     # Run
