@@ -9,6 +9,10 @@ trigger:
 pool: default
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'dos2unix /bats/VM-setup.sh'
+
 - task: Bash@3
   inputs:
     filePath: 'bats/VM-setup.sh'
