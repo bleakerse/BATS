@@ -40,7 +40,7 @@ else
 fi
 
 # Check if there is /etc/hosts file
-if [ !-f "/etc/hosts" ]
+if [ -f "/etc/hosts" ]
 then
     echo "SUCCESS. Found /etc/hosts file"
 else
