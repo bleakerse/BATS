@@ -50,7 +50,7 @@ fi
 # Check for entry in /etc/hosts and if the entry follows the format (IP,FQDN,Hostname)
 entry=$(grep -w $VMhostname /etc/hosts | sed '/^#/d')  
 array=($entry)
-#
+
 if [ !-z "$entry" ]
 then
     echo "ERROR. There is NOT an entry in /etc/hosts for the localhost"
