@@ -44,9 +44,13 @@ cp -R bats-support /bats-tests/test/test_helper
 cp -R bats-assert /bats-tests/test/test_helper
 cp -a bats-core/. /bats-tests/test/bats
 
-cp ~/ORCA_Catalog/bats/*.bats /bats-tests/test
-cp ~/ORCA_Catalog/bats/*.bash /bats-tests/test/test_helper
-cp ~/ORCA_Catalog/bats/*.sh /bats-tests/src
+#cp ~/ORCA_Catalog/bats/*.bats /bats-tests/test
+#cp ~/ORCA_Catalog/bats/*.bash /bats-tests/test/test_helper
+#cp ~/ORCA_Catalog/bats/*.sh /bats-tests/src
+
+cp ~/myagent/_work/1/s/bats/*.bats
+cp ~/myagent/_work/1/s/bats/*.bash
+cp ~/myagent/_work/1/s/bats/*.sh
 
 
 
