@@ -51,7 +51,7 @@ fi
 entry=$(grep -w $VMhostname /etc/hosts | sed '/^#/d')  
 array=($entry)
 
-if [ -z "$entry" ]
+if [ "$entry" ]
 then
     echo "ERROR. There is NOT an entry in /etc/hosts for the localhost"
     exit
