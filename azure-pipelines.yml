@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: MyPool
+pool: default
 
 steps:
 - task: Bash@3
