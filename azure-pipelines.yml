@@ -11,5 +11,5 @@ pool: default
 steps:
 - task: Bash@3
   inputs:
-    filePath: 'BATS/VM-setup.sh'
+    filePath: 'bats/VM-setup.sh'
     
