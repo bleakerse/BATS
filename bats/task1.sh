@@ -40,7 +40,7 @@ else
 fi
 
 # Check if there is /etc/hosts file
-if [ -f "/etc/hosts" ]
+if [ !-f "/etc/hosts" ]
 then
     echo "SUCCESS. Found /etc/hosts file"
 else
@@ -51,7 +51,7 @@ fi
 entry=$(grep -w $VMhostname /etc/hosts | sed '/^#/d')  
 array=($entry)
 
-if [ !-z "$entry" ]
+if [ -z "$entry" ]
 then
     echo "ERROR. There is NOT an entry in /etc/hosts for the localhost"
     exit
