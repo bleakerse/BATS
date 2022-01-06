@@ -42,13 +42,13 @@ totalRAM=$((totalRAM / 1024))
 echo "The host RAM size is $totalRAM GB"
  
 # Compare user inputted required RAM to actual Host RAM size
-if [ $totalRAM -eq $1 ]
+if [ $totalRAM -gt $1 ]
 then
     echo "SUCCESS. Host has equal memory required"
 elif [ $totalRAM -lt $1 ]
 then
     echo "ERROR. Host has less memory than required"
-elif [ $totalRAM -lt $1 ]
+elif [ $totalRAM -gt $1 ]
 then
     echo "WARNING. Host has more memory than required"
 fi
