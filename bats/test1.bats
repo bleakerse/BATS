@@ -8,7 +8,7 @@ setup() {
     VMhostname=$(hostname)
  
     # First character of test hostname cannot be -
-    hostNameStart=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w $((1)) | head -n 1)
+    hostNameStartEnd=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w $((1)) | head -n 1)
  
     # Create output.sh without exits
     echo '' > $PROJECT_ROOT/src/output.sh
@@ -25,8 +25,8 @@ setup() {
 @test "Hostname has acceptable characters and length" {
    
     # Set new hostname
-    goodHostNameEnd=$(cat /dev/urandom | tr -dc 'a-z0-9-' | fold -w $((1 + $RANDOM % 12)) | head -n 1)
-    goodHostName="$hostNameStart$goodHostNameEnd"
+    goodHostNameMiddle=$(cat /dev/urandom | tr -dc 'a-z0-9-' | fold -w $((1 + $RANDOM % 11)) | head -n 1)
+    goodHostName=$hostNameStartEnd$goodHostNameEnd$hostNameStartEnd
     hostname $goodHostName
  
     # Run
@@ -42,7 +42,7 @@ setup() {
  
     # Set new hostname
     badLengthEnd=$(cat /dev/urandom | tr -dc 'a-z0-9-' | fold -w $((13 + $RANDOM % 50)) | head -n 1)
-    badLength="$hostNameStart$badLengthEnd"
+    badLength=$hostNameStartEnd$badLengthEnd$hostNameStartEnd
     hostname $badLength
  
     # Run
