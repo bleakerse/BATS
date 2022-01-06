@@ -62,6 +62,7 @@ chmod -R 777 /bats-tests/src
 
 # Test scripts
 bats /bats-tests/test
+exitCode=$?
 
 # Uninstall BATS
 cd /bats-tests/bats-files/bats-core
@@ -69,3 +70,6 @@ cd /bats-tests/bats-files/bats-core
 
 # Remove filesystem
 rm -r /bats-tests
+
+# Exit
+exit $exitCode
