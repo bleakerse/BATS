@@ -48,7 +48,7 @@ then
 elif [ $totalRAM -lt $1 ]
 then
     echo "ERROR. Host has less memory than required"
-elif [ $totalRAM -lt $1 ]
+elif [ $totalRAM -gt $1 ]
 then
     echo "WARNING. Host has more memory than required"
 fi
