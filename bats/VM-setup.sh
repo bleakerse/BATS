@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Install git
+
+zypper install git
+
+
+
 # Create test directory
 
 mkdir /bats-tests
