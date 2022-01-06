@@ -49,9 +49,9 @@ cp -a bats-core/. /bats-tests/test/bats
 # cp ~/ORCA_Catalog/bats/*.bash /bats-tests/test/test_helper
 # cp ~/ORCA_Catalog/bats/*.sh /bats-tests/src
 
-cp $System.DefaultWorkingDirectory/*.bats /bats-tests/test
-cp $System.DefaultWorkingDirectory/*.bash /bats-tests/test/test_helper
-cp $System.DefaultWorkingDirectory/*.sh /bats-tests/src
+cp $1/bats/*.bats /bats-tests/test
+cp $1/bats/*.bash /bats-tests/test/test_helper
+cp $1/bats/*.sh /bats-tests/src
 
 
 
@@ -62,6 +62,7 @@ chmod -R 777 /bats-tests/src
 
 # Test scripts
 bats /bats-tests/test
+exitCode=$?
 
 # Uninstall BATS
 cd /bats-tests/bats-files/bats-core
@@ -69,3 +70,6 @@ cd /bats-tests/bats-files/bats-core
 
 # Remove filesystem
 rm -r /bats-tests
+
+# Exit
+exit $exitCode
