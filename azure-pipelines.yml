@@ -14,6 +14,7 @@ steps:
     script: 'dos2unix bats/*.*'
 
 - task: Bash@3
-  inputs: $(System.DefaultWorkingDirectory)
+  inputs:
     filePath: 'bats/VM-setup.sh'
+    arguments: '$(System.DefaultWorkingDirectory)'
     
