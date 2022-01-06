@@ -11,7 +11,7 @@ pool: default
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'unix2dos bats/*.*'
+    script: 'dos2unix bats/*.*'
 
 - task: Bash@3
   inputs:
