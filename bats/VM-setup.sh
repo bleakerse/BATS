@@ -49,9 +49,9 @@ cp -a bats-core/. /bats-tests/test/bats
 # cp ~/ORCA_Catalog/bats/*.bash /bats-tests/test/test_helper
 # cp ~/ORCA_Catalog/bats/*.sh /bats-tests/src
 
-cp $(rootPath)/*.bats /bats-tests/test
-cp $(rootPath)/*.bash /bats-tests/test/test_helper
-cp $(rootPath)/*.sh /bats-tests/src
+cp $1/*.bats /bats-tests/test
+cp $1/*.bash /bats-tests/test/test_helper
+cp $1/*.sh /bats-tests/src
 
 
 
