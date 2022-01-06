@@ -9,14 +9,11 @@ pool: default
 
 steps:
 
-- bash: |
-    echo "##vso[task.setvariable variable=rootPath;]$(System.DefaultWorkingDirectory)"
-
 - task: CmdLine@2
-  inputs:
+  inputs: 
     script: 'dos2unix bats/*.*'
 
 - task: Bash@3
-  inputs:
+  inputs: $(System.DefaultWorkingDirectory)
     filePath: 'bats/VM-setup.sh'
     
