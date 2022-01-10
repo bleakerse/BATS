@@ -17,8 +17,3 @@ steps:
   inputs:
     filePath: 'bats/VM-setup.sh'
     arguments: '$(System.DefaultWorkingDirectory)'
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo test1
